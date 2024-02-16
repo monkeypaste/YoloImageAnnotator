@@ -1,0 +1,53 @@
+{
+  "title": "Anotador de imagen yolo",
+  "description": "Un detector de objetos totalmente gratuito, local y liviano entrenado en 80 tipos diferentes de objetos.",
+  "version": "1.0.2.0",
+  "author": "Monkey",
+  "guid": "a54545be-e64e-4f51-a2fe-9206d5c64496",
+  "readmeUrl": "https://raw.githubusercontent.com/monkeypaste/YoloImageAnnotator/master/README.md",
+  "projectUrl": "https://github.com/monkeypaste/YoloImageAnnotator",
+  "packageUrl": "https://github.com/monkeypaste/YoloImageAnnotator/releases/download/v1.0.2.0/v1.0.2.0.zip",
+  "iconUri": "https://raw.githubusercontent.com/monkeypaste/YoloImageAnnotator/master/icon.png",
+  "packageType": "Dll",
+  "tags": "Detección de imágenes, anotación, imagen, IA, texto",
+  "analyzer": {
+    "inputType": {
+      "image": true
+    },
+    "outputType": {
+      "imageToken": true
+    },
+    "parameters": [
+      {
+        "label": "Confianza",
+        "description": "Un valor entre 0 y 1 para filtrar precisión detectada",
+        "controlType": "Slider",
+        "unitType": "Decimal",
+        "minimum": 0,
+        "maximum": 1,
+        "isRequired": true,
+        "paramId": "conf",
+        "values": [
+          {
+            "value": "0.1",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "label": "Source Content",
+        "description": "The base64-encoded image to analyze",
+        "controlType": "TextBox",
+        "unitType": "PlainTextContentQuery",
+        "isRequired": true,
+        "isVisible": false,
+        "paramId": "img64",
+        "values": [
+          {
+            "value": "{ClipText}"
+          }
+        ]
+      }
+    ]
+  }
+}
